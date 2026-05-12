@@ -1,0 +1,15 @@
+{
+  "name": "multisession-tabs-extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome MV3 extension for per-tab same-domain session isolation.",
+  "scripts": {
+    "install:browser": "npx @puppeteer/browsers install chrome@136.0.7103.113 --path .browsers",
+    "test": "node test/static-check.js && node test/e2e.js",
+    "test:static": "node test/static-check.js",
+    "test:e2e": "node test/e2e.js"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.31.0"
+  }
+}

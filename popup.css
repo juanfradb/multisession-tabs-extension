@@ -1,0 +1,168 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 340px;
+  color: #172033;
+  background: #f7f8fb;
+}
+
+main {
+  padding: 14px;
+}
+
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+h2 {
+  margin: 16px 0 8px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #586174;
+}
+
+p,
+label {
+  font-size: 12px;
+  color: #586174;
+}
+
+#status {
+  width: 12px;
+  height: 12px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+input {
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid #ccd3df;
+  border-radius: 6px;
+  background: #fff;
+  color: #172033;
+}
+
+button {
+  height: 34px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  background: #1d4ed8;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+button.secondary {
+  width: 100%;
+  margin-top: 8px;
+  color: #172033;
+  background: #e2e8f0;
+}
+
+button.danger {
+  width: 100%;
+  margin-top: 8px;
+  background: #be123c;
+}
+
+button.small {
+  height: 28px;
+  padding: 0 9px;
+  font-size: 12px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 12px 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.name {
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e5e7eb;
+    background: #111827;
+  }
+
+  input {
+    border-color: #374151;
+    color: #e5e7eb;
+    background: #1f2937;
+  }
+
+  button.secondary {
+    color: #e5e7eb;
+    background: #374151;
+  }
+
+  li {
+    border-color: #273244;
+  }
+}

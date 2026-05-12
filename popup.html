@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MultiSession Tabs</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>MultiSession</h1>
+          <p id="site">Loading...</p>
+        </div>
+        <span id="status"></span>
+      </header>
+
+      <section id="unsupported" hidden>
+        <p>Open an http or https page first.</p>
+      </section>
+
+      <section id="controls" hidden>
+        <label for="session-name">New session name</label>
+        <div class="row">
+          <input id="session-name" type="text" maxlength="40" placeholder="Work, Personal, QA...">
+          <button id="new-tab" title="Open current URL in a new isolated tab">New tab</button>
+        </div>
+        <button id="use-here" class="secondary" title="Reload current tab into a new isolated session">Use here</button>
+        <button id="leave" class="danger" title="Return current tab to normal browser session" hidden>Leave session</button>
+      </section>
+
+      <section id="sessions" hidden>
+        <h2>Saved sessions</h2>
+        <ul id="session-list"></ul>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

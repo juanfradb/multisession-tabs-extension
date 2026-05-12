@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "MultiSession Tabs",
+  "short_name": "MultiSession",
+  "version": "0.1.0",
+  "description": "Run multiple isolated sessions for the same website in tabs in one Chrome window.",
+  "permissions": [
+    "cookies",
+    "declarativeNetRequest",
+    "scripting",
+    "storage",
+    "tabs",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "MultiSession Tabs"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "ISOLATED"
+    }
+  ],
+  "commands": {
+    "new-session-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Open current site in a new isolated session tab"
+    }
+  },
+  "minimum_chrome_version": "116"
+}
